@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@johnmoodsok</title>
+
+    <!-- SCRIPTS NECESARIOS -CDN- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- CSS BOOTSTRAP 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header>
+        <div id="div_userToConnect" class="card m-2 text-center">
+            <div class="card-body">
+                <input type="text" id="userToConnect" placeholder="Ingrese un @usuario">
+                <button type="button" id="connectButton" class="btn btn-success">Conectar!</button>
+            </div>
+        </div>
+
+        <div id="div_stateText" class="card m-2">
+            <div class="card-body text-center">
+                <div id="stateText"></div>
+            </div>
+        </div>
+
+        <div class="card m-2">
+            <div class="card-body text-center">
+                <div id="roomStats"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" class="text-center">Chat</th>
+                <th scope="col" class="text-center">Regalos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row">
+                    <div class="chatcontainer ">
+                        <!--<h3>Chat</h3>-->
+                    </div>
+                </td>
+
+                <td>
+                    <div class="giftcontainer ">
+                        <!--<h3>Regalos</h3>-->
+                    </div>
+                </td>
+              </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <script src="connection.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
